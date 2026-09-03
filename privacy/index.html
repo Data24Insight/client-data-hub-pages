@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>고객 Data Hub 개인정보처리방침</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #eef1f2;
+    --surface: #ffffff;
+    --ink: #141b22;
+    --ink-soft: #4c5862;
+    --ink-faint: #7c8791;
+    --line: #d3dade;
+    --accent: #b9661f;
+    --accent-ink: #7a4413;
+    --accent-soft: #f3e2cf;
+    --focus: #2f6fa8;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #10151b;
+      --surface: #161d25;
+      --ink: #e9edf0;
+      --ink-soft: #a7b1b9;
+      --ink-faint: #74808a;
+      --line: #2a333c;
+      --accent: #e08b3f;
+      --accent-ink: #ffd9ab;
+      --accent-soft: #3a2c1b;
+      --focus: #6fa8dc;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #10151b;
+    --surface: #161d25;
+    --ink: #e9edf0;
+    --ink-soft: #a7b1b9;
+    --ink-faint: #74808a;
+    --line: #2a333c;
+    --accent: #e08b3f;
+    --accent-ink: #ffd9ab;
+    --accent-soft: #3a2c1b;
+    --focus: #6fa8dc;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans KR", "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--focus); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+  .sheet {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 5rem;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: var(--accent-soft);
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 1.4rem;
+  }
+
+  h1 {
+    font-family: "Gowun Batang", "Noto Serif KR", serif;
+    font-weight: 700;
+    font-size: clamp(1.9rem, 1.5rem + 1.6vw, 2.5rem);
+    line-height: 1.28;
+    margin: 0 0 0.9rem;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: 42rem;
+    margin: 0 0 2.6rem;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin: 0 0 3.2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .facts li {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.7rem 0.95rem;
+    flex: 1 1 13rem;
+  }
+
+  .facts .k {
+    display: block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.3rem;
+  }
+
+  .facts .v {
+    font-weight: 600;
+    font-size: 0.98rem;
+  }
+
+  section { margin: 0 0 2.6rem; }
+
+  section h2 {
+    font-family: "Gowun Batang", "Noto Serif KR", serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0 0 0.2rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--line);
+  }
+
+  section p, section li {
+    max-width: 40rem;
+    color: var(--ink);
+  }
+
+  section p { margin: 0.7rem 0; }
+
+  section ul {
+    margin: 0.7rem 0;
+    padding-left: 1.25rem;
+  }
+
+  section li { margin: 0.35rem 0; }
+
+  code, .scope {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.88em;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+  }
+
+  .no-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .no-list li {
+    padding-left: 1.6rem;
+    position: relative;
+  }
+
+  .no-list li::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: var(--ink-faint);
+    font-size: 0.85em;
+    top: 0.15em;
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.4rem;
+    justify-content: space-between;
+    color: var(--ink-faint);
+    font-size: 0.88rem;
+  }
+
+  footer a { color: var(--ink-soft); }
+
+  @media (max-width: 30rem) {
+    .sheet { padding: 3rem 1.1rem 4rem; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <span class="eyebrow">Google API 접근 범위 안내</span>
+  <h1>고객 Data Hub 개인정보처리방침</h1>
+  <p class="lede">
+    이 문서는 "고객 Data Hub"가 Google 계정에 요청하는 단 하나의 권한 —
+    Gmail 발송 전용(<span class="scope">gmail.send</span>) — 을 어떤 목적으로,
+    어떻게 사용하는지 설명합니다.
+  </p>
+
+  <ul class="facts">
+    <li><span class="k">권한 범위</span><span class="v">발송 전용</span></li>
+    <li><span class="k">받은편지함 접근</span><span class="v">없음</span></li>
+    <li><span class="k">제3자 데이터 공유</span><span class="v">없음</span></li>
+    <li><span class="k">이메일 내용 저장</span><span class="v">없음</span></li>
+  </ul>
+
+  <section>
+    <h2>이 앱은 무엇인가요</h2>
+    <p>
+      "고객 Data Hub"는 이노뎁(Innodep) 사내에서 지방자치단체 고객사의
+      운영 데이터를 담당자가 조회할 수 있게 모아두는 내부 업무 도구입니다.
+      일반에 공개된 서비스가 아니며, 소속 직원만 로그인해 사용합니다.
+    </p>
+  </section>
+
+  <section>
+    <h2>Gmail 권한을 요청하는 이유</h2>
+    <p>
+      이 시스템은 새벽 시간대를 포함해 하루 여러 차례 외부 시스템(Salesforce,
+      Jira)과 데이터를 자동으로 동기화합니다. 이 동기화가 실패하면 담당자가
+      즉시 알 수 있도록, 지정된 관리자 이메일 한 곳으로 실패 알림 메일을
+      자동 발송합니다. <span class="scope">gmail.send</span> 권한은 오직
+      이 알림 메일을 보내는 데에만 쓰입니다.
+    </p>
+  </section>
+
+  <section>
+    <h2>이 권한으로 하지 않는 것</h2>
+    <ul class="no-list">
+      <li>받은편지함의 메일을 읽거나 검색하지 않습니다</li>
+      <li>메일을 삭제하거나 수정하지 않습니다</li>
+      <li>연락처, 라벨 등 다른 Google 계정 데이터에 접근하지 않습니다</li>
+      <li>발송한 메일의 내용을 별도로 수집·저장·분석하지 않습니다</li>
+      <li>이 권한으로 얻은 어떤 정보도 제3자와 공유하지 않습니다</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>데이터 보관</h2>
+    <p>
+      알림 메일은 발송과 동시에 처리가 끝나며, 이 권한과 관련해 별도로
+      보관하는 데이터는 없습니다. 시스템 자체 운영 로그에는 "발송
+      성공/실패" 여부와 시각만 텍스트로 짧게 남으며, 이는 시스템 안정성
+      점검 목적의 사내 로그일 뿐 Gmail 데이터가 아닙니다.
+    </p>
+  </section>
+
+  <section>
+    <h2>적용 범위</h2>
+    <p>
+      이 방침은 위에서 설명한 Gmail 발송 기능 하나에 한정됩니다.
+      "고객 Data Hub"가 다루는 지자체 고객사 데이터 전반의 취급 방식은
+      이노뎁의 별도 사내 정책을 따르며, 이 페이지의 대상이 아닙니다.
+    </p>
+  </section>
+
+  <footer>
+    <span><a href="../">← 고객 Data Hub 소개로</a></span>
+    <span>최종 갱신 2026-09-03</span>
+    <span>문의: <a href="mailto:data24insight@gmail.com">data24insight@gmail.com</a></span>
+  </footer>
+</div>
+</body>
+</html>
